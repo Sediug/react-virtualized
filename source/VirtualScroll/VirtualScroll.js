@@ -173,7 +173,7 @@ export default class VirtualScroll extends Component {
   }
 
   componentWillReceiveProps (newProps) {
-    if (newProps.forceRecomputeRowHeights) {
+    if (this._grid && newProps.forceRecomputeRowHeights) {
       this.recomputeRowHeights(0)
     }
   }
